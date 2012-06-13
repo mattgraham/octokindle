@@ -1,4 +1,4 @@
 Octokindle
 ==========
 
-Octocat Kindle Screens
+This is a collection of Octocat Kindle Screensavers! 
