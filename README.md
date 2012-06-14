@@ -4,7 +4,7 @@ Octokindle
 
 These modifications should work with the v5.1.0 firmware version of Kindle Touch. Make all changes at your own risk. (It was a very smooth install for myself) I am just the screensaver orginizer if you have any questions hit me up on twitter: [@michigangraham](http://twitter.com/#!/michigangraham).
 
-Huge thanks to [@cobyism](https://github.com/cobyism) and [@dreww](https://github.com/dreww) for getting things rolling on this, much of this content is from/because of them.
+Huge thanks to [@cobyism](https://github.com/cobyism) and [@dreww](https://github.com/dreww) for getting things rolling on this, much of this content is because they got it started.
 
 Feel free to submit pull requests with new octocat screensavers. I'll accept and reject them based on my personal biases, and taste in design.
 
