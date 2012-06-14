@@ -1,0 +1,134 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Octokindle by mattgraham</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/main.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+
+      <header>
+        <h1>Octokindle</h1>
+        <p>Octocat Kindle Screens</p>
+      </header>
+
+      <div id="banner">
+        <span id="logo"></span>
+
+        <a href="https://github.com/mattgraham/octokindle" class="button fork"><strong>View On GitHub</strong></a>
+        <div class="downloads">
+          <span>Downloads:</span>
+          <ul>
+            <li><a href="https://github.com/mattgraham/octokindle/zipball/master" class="button">ZIP</a></li>
+            <li><a href="https://github.com/mattgraham/octokindle/tarball/master" class="button">TAR</a></li>
+          </ul>
+        </div>
+      </div><!-- end banner -->
+
+    <div class="wrapper">
+      <nav>
+        <ul></ul>
+      </nav>
+      <section>
+        <h1>Octokindle</h1>
+
+<hr><p>These modifications should work with the v5.1.0 firmware version of Kindle Touch. Make all changes at your own risk. (It was a very smooth install for myself) I am just the screensaver orginizer if you have any questions hit me up on twitter: <a href="http://twitter.com/#!/michigangraham">@michigangraham</a>.</p>
+
+<p>Huge thanks to <a href="https://github.com/cobyism">@cobyism</a> and <a href="https://github.com/dreww">@dreww</a> for getting things rolling on this, much of this content is from/because of them.</p>
+
+<p>Feel free to submit pull requests with new octocat screensavers. I'll accept and reject them based on my personal biases, and taste in design.</p>
+
+<p><img src="http://distilleryimage11.s3.amazonaws.com/39668d96b56c11e1abb01231382049c1_7.jpg" alt="Octokindle"></p>
+
+<h2>Removing Advertisements</h2>
+
+<p>There are ways on the interweb to remove the advertisements from your kindle. Hoevere, my recomendation is, pay for them. Goto "Manage Your Devices" tab in your amazon account and unsubscribe from special offers. Its anoying I understand, but the right thing to do. </p>
+
+<h2>Jailbreak</h2>
+
+<p>In order to do nifty things with your Kindle, you'll need to jailbreak it first. On it's own, this doesn't do anything, however, it will allow beautiful customizations to happen.</p>
+
+<ol>
+<li>Download <a href="http://gr4m.com/LAmdhG">the jailbreak file</a>
+</li>
+<li>Plug in the Kindle via USB and copy all the files and directories contained in the downloaded zip file (data.tar.gz, ENABLE_DIAGS, diagnostic_logs) directly to the Kindle’s USB drive’s root.</li>
+<li>Safely remove/eject the Kindle from USB and restart it (Menu -&gt; Settings -&gt; Menu -&gt; Restart)</li>
+<li>Once the device restarts into diagnostics mode, select "D) Exit, Reboot or Disable Diags" (by tapping on the appropriate entries)</li>
+<li>Select "R) Reboot System" and "Q) To continue"</li>
+<li>You should see the Jailbreak screen and the device should restart back into diagnostics mode; Select "D) Exit, Reboot or Disable Diags" again</li>
+<li>Select "D) Disable Diagnostics" and then "Q) To continue"</li>
+</ol><p>Once your Kindle reboots into the normal firmware, it should be jailbroken. At this point you can safely delete the diagnostic_logs folder on the Kindle USB drive.</p>
+
+<h2>GUI Launcher</h2>
+
+<p>To manage extensions on your jailbroken Kindle, it's best to use this thing called the GUI Launcher. Here's how to get it:</p>
+
+<ol>
+<li>Download <a href="http://gr4m.com/NyKFBR">launcher file</a>
+</li>
+<li>Plug the Kindle to your computer via USB.</li>
+<li>Copy the file named "update_launcher_1.2.1_install.bin" to your Kindle. Make sure to place it directly in the top-level directory of the USB drive, not in the "documents" subdirectory or in any other subdirectory.</li>
+<li>Safely eject the Kindle from the computer.</li>
+<li>On the Kindle, choose Menu -&gt; Settings -&gt; Menu -&gt; Update Your Kindle.</li>
+</ol><p>The device will add the GUI Launcher to your Kindle, which you can access by choosing Menu -&gt; Launcher.</p>
+
+<h2>Custom Screensavers</h2>
+
+<p>The default screensavers aren't terrible, but the entire purpose of custom screensavers is to make your kindle, yours. To do this you need to run terminal commands on the kindle. The easiest way in my opinion is to use the XTerm extension instead:</p>
+
+<ol>
+<li>Download <a href="http://gr4m.com/KFZTih">xterm extension</a>
+</li>
+<li>Extract the extension folder into '/extensions' folder on your Kindle.</li>
+<li>Safely eject your Kindle, and then restart it (Menu -&gt; Launcher -&gt; Reboot).</li>
+<li>Launch xterm via: Menu -&gt; Launcher -&gt; Start XTerm</li>
+<li>In the Xterm prompt, run the following commands (be mindful of the spaces):
+
+<ul>
+<li>mntroot rw</li>
+<li>mkdir /mnt/us/screensavers</li>
+<li>cp /usr/share/blanket/screensaver/*.png /mnt/us/screensavers/</li>
+<li>rm -rf /usr/share/blanket/screensaver</li>
+<li>ln -sfn /mnt/us/screensavers /usr/share/blanket/screensaver</li>
+<li>exit</li>
+</ul>
+</li>
+</ol><p>Finshed! You'll be able to use any images you like as the screensavers on your Kindle by uploading them in the 'screensavers' folder that will now appear on the Kindle drive. In order for the screensavers to be recognized however, there are some requirements you need to adhere to:</p>
+
+<ul>
+<li>Screensavers must be PNG images</li>
+<li>They must be 600px by 800px grayscale images.</li>
+<li>All image names must be: 'bg_xsmall_ss##.png' (the ## are two digits starting at 00 and increasing sequentially, i.e. bg_xsmall_ss00.png, bg_xsmall_ss01.png, etc…).</li>
+</ul><h3>Octocat Screensavers</h3>
+
+<p>The purpose of this repo is to fill your kindle with octocat screensavers. Check the '/screensavers' folder in this for mycollected Octocat images.</p>
+
+<h2>Credits</h2>
+
+<p>Again thanks to <a href="https://github.com/cobyism">@cobyism</a> and <a href="https://github.com/dreww">@dreww</a> to putting some of these details together and many thanks to the following sites in which many of the instructions and files above were taken from:</p>
+
+<ul>
+<li><a href="http://wiki.mobileread.com/wiki/Kindle_Touch_Hacking">http://wiki.mobileread.com/wiki/Kindle_Touch_Hacking</a></li>
+<li><a href="http://www.mobileread.com/forums/showthread.php?p=2075539#post2075539">http://www.mobileread.com/forums/showthread.php?p=2075539#post2075539</a></li>
+<li><a href="http://ebookjuggler.com/kindle/removing-ads-on-the-kindle-touch/">http://ebookjuggler.com/kindle/removing-ads-on-the-kindle-touch/</a></li>
+<li><a href="http://www.fabiszewski.net/kindle-xterm/">http://www.fabiszewski.net/kindle-xterm/</a></li>
+</ul>
+      </section>
+      <footer>
+        <p>Project maintained by <a href="https://github.com/mattgraham">mattgraham</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="http://twitter.com/#!/michigangraham">mattgraham</a></small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><!--<![endif]-->
+    
+  </body>
+</html>
